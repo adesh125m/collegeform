@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>College Admision Form</title>
+</head>
+
+<body>
+    <script>
+
+    </script>
+    <style>
+        body {
+            background-color: lightgreen;
+            color: black;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        form {
+            margin-left: 10rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input {
+            margin-left: 5%;
+
+        }
+        :root {
+    --bg: #1a1e24;
+    --color: #eee;
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+    filter: url('#goo');
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
+
+
+/* Demo styles */
+
+/* body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg)
+} */
+    </style>
+    <h3> <b>College Admission Form</b></h3>
+
+        <datalist id="cars">
+            <option value="1st Year" >
+            <option value="2nd Year" >
+            <option value="3rd Year" >
+        </datalist>
+    <form>
+        Enter Your Name:
+        <input type="text" name="tf1"> <br><br>
+        Enter Mobile No:
+        <input type="text" name="tf2"><br><br>
+        Enter Email Id:
+        <input type="text" name="tf3"><br><br>
+        Select Gender:
+        <input type="radio" name="rb1">Male <input type="radio" name="rb1">Female<input type="radio"
+            name="rb1">Other<br><br>
+        Enter Address:
+        <input type="text" name="tf4"><br><br>
+        Enter Adhar No:
+
+        <input type="text" name="tf5"><br><br>
+        Choose Category:
+        <input type="radio" name="rb1">SC,ST
+        <input type="radio" name="rb1">NT: a,b,c,d
+        <input type="radio" name="rb1">Open
+        <input type="radio" name="rb1">OBC
+       
+        <br><br>
+        Admission taking for: 
+        <input list="cars"><br><br>
+        <!-- <input type="button" name="rb1" value="Submit"> -->
+    </form>
+    <div class="wrapper">
+        <a class="button" href="#">Submit</a>
+    </div>
+    
+    <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>
